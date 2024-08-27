@@ -13,3 +13,7 @@ var x = 8; // writing and printing the result of my expression
 var y = 14;
 var result = (x * y);
 document.write(result);
+
+function helloThere() {
+    alert('Hello there!');
+}
