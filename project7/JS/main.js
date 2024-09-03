@@ -3,14 +3,12 @@ function addNum() { //local variable
     document.getElementById("test2").innerHTML = 22 + Y; // Use innerHTML instead of document.write
 }
 
-addNum();
 
 var X = 11;
 function subNum() { //global variable
     document.getElementById("test2").innerHTML = 24 - X; // Use innerHTML instead of document.write
 }
 
-subNum();
 
 function test() { //error with debugging using console.log()
     console.log('Y is a local variable');
@@ -37,13 +35,13 @@ function birthMonth() {
     }
 }
 
-function timeFunc() {
+function timeFunc() { // time function that displays a message based on the users time of day
     var Time = new Date().getHours();
     var Reply;
     
-    if (Time < 12) {
+    if (Time < 12 == Time > 0) {
         Reply = "It is morning time";
-    } else if (Time >= 12 && Time < 18) {
+    } else if (Time >= 12 == Time < 18) {
         Reply = "It is afternoon";
     } else {
         Reply = "It is night time";
