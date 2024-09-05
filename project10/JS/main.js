@@ -1,4 +1,4 @@
-function Call_Loop() {
+function Call_Loop() { // function for a loop to start counting from 0-18
     var i = "";
     var x = 1;
     while (x < 19) {
@@ -8,12 +8,14 @@ function Call_Loop() {
     document.getElementById("loop").innerHTML = i;
 }
 
-function testLoop() {
+function testLoop() {  //loop that prints the length of a string
     var z = "This is a string";
     var w = z.length;
     document.getElementById("test").innerHTML = w;
 }
 
+
+//loop that displays nhl players with 1500+ pts, first we have the array of names, then it will use content to initialize an empty string, y is the loops variable, the function will loop through the array and display each players name 
 var players = ["Wayne Gretzky", "Jaromir Jagr", "Mark Messier", "Gordie Howe", "Ron Francis", "Marcel Dionne", "Steve Yzerman", "Mario Lemieux", "Joe Sakic", "Sidney Crosby", "Phil Esposito", "Raymond Bourque", "Alex Ovechkin", "Joe Thornton", "Mark Recchi", "Paul Coffey"];
 var Content = "";
 var y;
@@ -25,7 +27,7 @@ function forLoop() {
     document.getElementById("players1").innerHTML = Content;
 }
 
-function arrayFunction() {
+function arrayFunction() { // an array function to display elements 
     var testing1 = [];
     testing1[0] = "Alex Ovechkin";
     testing1[1] = "Nick Backstrom";
@@ -36,7 +38,7 @@ function arrayFunction() {
     var array1 = document.getElementById("array").innerHTML = "the starting goaltender in the lineup is " + testing1[5] + ".";
 }
 
-function constFunction() {
+function constFunction() { // using const to create an object, added properties to values, changed the name of the weapon type + printed a string 
     const raidWep = {type:"twisted bow ", style:"ranged", raid:"chambers"};
     raidWep.owned = "no";
     raidWep.price = "1.7b";
@@ -44,7 +46,7 @@ function constFunction() {
     document.getElementById("constant").innerHTML = "Do I own this item: " + raidWep.type + "unfortunately, " + raidWep.owned + ".";
 }
 
-function testLet () {
+function testLet () { // demonstrating the difference between var/let while having let in block scope
     var x = 25;
     document.write("<br>" + x)
     {
@@ -55,7 +57,7 @@ function testLet () {
 }
 
 
-function addTest() {
+function addTest() { // using return for an addition function 
     var x = 14;
     var y = 19;
     var z = x + y;
@@ -63,7 +65,7 @@ function addTest() {
     return z;
 }
 
-let skates = {
+let skates = { // created an object using let as keyword, with properties and method - then calling function and printing results 
     brand: "ccm ",
     model: "tacks ",
     size: "senior ",
@@ -72,7 +74,7 @@ let skates = {
         return "The skates are made by " + this.brand + this.model + "cost " + this.cost + "for" + this.size;
     }
 };
-document.getElementById("skateTest").innerHTML = skates.description();
+document.getElementById("skateTest").innerHTML = skates.description(); // break statement in a loop 
 
 var skills = ["Herblore", "Farming", "Woodcutting", "Firemaking", "Fletching"]
 var content = ""
@@ -84,7 +86,7 @@ function skillLoop() {
     document.getElementById("skill").innerHTML = content;
 }
 
-var skills1 = ["Mining", "Smithing", "Fishing", "Cooking", "Runecrafting"]
+var skills1 = ["Mining", "Smithing", "Fishing", "Cooking", "Runecrafting"] // continue statement in a loop
 var content1 = ""
 function skillLoop1() {
 for (let x = 0; x < skills1.length; x++) {
