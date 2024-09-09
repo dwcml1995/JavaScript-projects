@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+	<html lang="en">
+		<head>
+			<meta charset="utf-8">
+			<title>Form Validator</title>
+			<link rel="stylesheet" type="text/css" href="CSS/main.css">
+		</head>
+		<body>
+            <form name="myForm" action="#" onsubmit="return valForm()" method="post">
+                <label for="fname">First Name: </label><br>
+                <input type="text" id="fname" name="fname"><br>
+                <label for="lname">Last Name: </label><br>
+                <input type="text" id="lname" name="lname"><br>
+                <label for="phone-number">Phone Number: </label><br>
+                <input type="number" id="pnum" name="phone-number""><br><br>
+                <input type="submit" value="Submit"><br>
+            </form>
+            <h1>NHL Players</h1>
+            <ul>
+                <li onclick="thisPlayer(this)" id="Washington" data-player="Alex Ovechkin">Washington</li>
+                <li onclick="thisPlayer(this)" id="Chicago" data-player="Connor Bedard">Chicago</li>
+                <li onclick="thisPlayer(this)" id="Montreal" data-player="Patrik Laine">Montreal</li>
+                <li onclick="thisPlayer(this)" id="Colorado" data-player="Nathan MacKinnon">Colorado</li>
+            </ul>
+			<script src="JS/main.js"></script>
+		</body>
+</html>
