@@ -29,12 +29,13 @@ function getReceipt() {
     console.log("subtotal: $" +runningTotal+".00");
     //variables passed to each function
     getTopping(runningTotal,text1); //calls get topping with updated total and text
+    getVeg(runningTotal, text1); //calls veggie toppings with updated total/text
 };
 
 
 //function to get toppings, will create an array and loop through to check which are selected, adds the selected toppings to the order and displays on the receipt 
 function getTopping(runningTotal, text1) { 
-    var toppingTotal = 0;
+    var toppingTotal = 0; //initializes at 0
     var selectedTopping = [];
     var toppingArray = document.getElementsByClassName("toppings");
     for (var j = 0; j < toppingArray.length; j++) {
@@ -59,5 +60,35 @@ function getTopping(runningTotal, text1) {
     console.log("Purchase Total: "+"$"+runningTotal+"0.00");
     document.getElementById("showText").innerHTML = text1;
     document.getElementById("totalPrice").innerHTML = "<h3>Total: <strong>$" + runningTotal+".00"+"</strong></h3>";
+}
+
+
+//function to get veggie toppings, will create an array and loop through to check which are selected, adds the selected toppings to the order and displays on the receipt
+function getVeg(runningTotal, text1) {
+    var vegTotal = 0; //initializes @ 0 
+    var selectedVeg = [];
+    var vegArray = document.getElementsByClassName("toppings1");
+    for (var z = 0; z < vegArray.length; z++) {
+        if (vegArray[z].checked) {
+            selectedVeg.push(vegArray[z].value);
+            console.log("Selected topping item: (" + vegArray[z].value + ")");
+            text1 += vegArray[z].value + "<br>";
+        }
+    }
+    var vegCount = selectedVeg.length; //total veggie toppings, subtracts one for the free topping
+    if (vegCount > 1) {
+        vegTotal = (vegCount - 1);
+    } else {
+        vegTotal = 0;
+    }
+
+    //updates the running total, then added to veggie topping total and displayed on screen with the order
+    runningTotal = (runningTotal + vegTotal);
+        console.log("total selected veggie toppings: " + vegCount);
+        console.log(vegCount+" topping - 1 free topping = "+"$"+vegTotal+"0.00");
+        console.log("toppings text1: "+text1);
+        console.log("Purchase Total: "+"$"+runningTotal+"0.00");
+        document.getElementById("showText").innerHTML = text1;
+        document.getElementById("totalPrice").innerHTML = "<h3>Total: <strong>$" + runningTotal+".00"+"</strong></h3>";
 };
 
