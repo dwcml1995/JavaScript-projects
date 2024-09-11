@@ -45,4 +45,26 @@
     margin: 10px 0px 0px 100px;
     width: 100px;
     height: 40px;
+    background-color: #ffdf00;
+    color: #353935;
+}
+
+body {
+    background-color: #353935;
+    color: #faebd7;
+}
+
+h1 {
+    font-family: Arial;
+    color: #faebd7;
+}
+
+h3 {
+    font-family: Arial;
+    color: #faebd7;
+}
+
+div {
+    font-family: arial;
+    color: #faebd7;
 }
