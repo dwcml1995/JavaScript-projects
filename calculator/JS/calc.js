@@ -108,5 +108,5 @@ keys.addEventListener('click', (event) => {
         return;
     }
     Input_Digit(target.value);
-    Update_Display();
+    Update_Display());
 })
