@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>My Favourite NHL Players</title>
+    <link rel="stylesheet" href="./css/styles.css"> 
+</head>
+<body>
+
+<!-- nav elements-->
+<div>
+    <nav>
+        <ul>
+            <li><a href="#home" id="link">Home</a></li>
+            <li><a href="#players">Players</a></li>
+            <li><a href="#contact">Form</a></li>
+        </ul>
+    </nav>
+</div>
+
+<!-- home -->
+<div id="home">
+    <div>
+        <div>
+            <span>Best of the Best</span>
+            <p><em>These are my <strong>favourite</strong> players in the league!</em></p>
+        </div>
+    </div>
+</div>
+<!-- end home -->
+
+<!-- images to open lightbox -->
+<div id="players">
+    <div class="row">
+        <!-- add alt text to each image -->
+        <div class="column">
+            <img src="./img/ovi.png" onclick="openModal();currentSlide(1)" class="hover-shadow" alt="Ovechkin">
+        </div>
+        <div class="column">
+            <img src="./img/leon.png" onclick="openModal();currentSlide(2)" class="hover-shadow">
+        </div>
+        <div class="column">
+            <img src="./img/mack.png" onclick="openModal();currentSlide(3)" class="hover-shadow">
+        </div>
+        <div class="column">
+            <img src="./img/laine.png" onclick="openModal();currentSlide(4)" class="hover-shadow">
+        </div>
+        <div class="column">
+            <img src="./img/bedsy.png" onclick="openModal();currentSlide(5)" class="hover-shadow">
+        </div>
+        <div class="column">
+            <img src="./img/johnston.png" onclick="openModal();currentSlide(6)" class="hover-shadow">
+        </div>
+        <div class="column">
+            <img src="./img/chuck.png" onclick="openModal();currentSlide(7)" class="hover-shadow">
+        </div>
+        <div class="column">
+            <img src="./img/mctavish.png" onclick="openModal();currentSlide(8)" class="hover-shadow">
+        </div>
+        <div class="column">
+            <img src="./img/cozens.png" onclick="openModal();currentSlide(9)" class="hover-shadow">
+        </div>
+    </div>
+</div>
+
+<!-- modal/lightbox -->
+<div id="myModal" class="modal">
+    <span class="close cursor" onclick="closeModal()">&times;</span>
+    <div class="modal-content">
+        <!-- slides -->
+        <div class="mySlides">
+            <div class="numbertext">1 / 9</div>
+            <img src="./img/players/ovi_wide.png" style="width:100%">
+        </div>
+        <div class="mySlides">
+            <div class="numbertext">2 / 9</div>
+            <img src="./img/players/leon_wide.png" style="width:100%">
+        </div>
+        <div class="mySlides">
+            <div class="numbertext">3 / 9</div>
+            <img src="./img/players/mack_wide.jpg" style="width:100%">
+        </div>
+        <div class="mySlides">
+            <div class="numbertext">4 / 9</div>
+            <img src="./img/players/laine_wide.png" style="width:100%">
+        </div>
+        <div class="mySlides">
+            <div class="numbertext">5 / 9</div>
+            <img src="./img/players/bedsy_wide.png" style="width:100%">
+        </div>
+        <div class="mySlides">
+            <div class="numbertext">6 / 9</div>
+            <img src="./img/players/johnston_wide.png" style="width:100%">
+        </div>
+        <div class="mySlides">
+            <div class="numbertext">7 / 9</div>
+            <img src="./img/players/chuck_wide.png" style="width:100%">
+        </div>
+        <div class="mySlides">
+            <div class="numbertext">8 / 9</div>
+            <img src="./img/players/mctavish_wide.png" style="width:100%">
+        </div>
+        <div class="mySlides">
+            <div class="numbertext">9 / 9</div>
+            <img src="./img/players/cozens_wide.png" style="width:100%">
+        </div>
+        <!-- controls -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        <!-- caption text -->
+        <div class="caption-container">
+            <p id="caption"></p>
+        </div>
+    </div>
+</div>
+
+
+<!-- form -->
+<section id="contact">
+    <div class="container">
+        <div class="heading-padding">
+            <h1 class="heading-padding">Reach out to me!</h1>
+                <p class="contact-text">
+                    Please fill out the info below to tell me who your favourite players are and why!
+                </p>
+                <div class="form-text">
+                    <form action="" method="post">
+                        <input class="cont" type="text" name="favorite_player" placeholder="Favourite Player" required><br>
+                        <input class="cont" type="text" name="player_team" placeholder="Player's Team" required><br>
+                        <input class="cont" type="text" name="reason" placeholder="Why they're your favourite" required>
+                        <div class="form-spacer"></div><br>
+                        <div class="submit">
+                            <label class="terms">
+                                <input type="checkbox" name="terms" required> I agree to the Terms and Conditions
+                            </label>
+                            <input type="submit" value="Submit">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- end form -->
+
+<!-- footer -->
+<div id="footer">
+    www.myfavouriteplayers.hockey &nbsp; | &nbsp; &copy; 2024
+</div>
+
+<script src="JS/opw.js"></script>
+</body>
+</html>
