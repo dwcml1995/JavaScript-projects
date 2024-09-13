@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- linking bootstrap -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <title>Academy Arena</title>
+</head>
+<body>
+    <!-- container for navbar -->
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link text-white" href="#game-schedule">Game Schedule</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link text-white" href="#fifty-fifty">50/50 Tickets</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link text-white" href="#tickets">Game Tickets</a>
+                    </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-danger text-white my-2 my-sm-0" type="submit">Search</button>
+                </form>
+            </div>
+        </nav>
+        <!--jumbotron-->
+        <div class="jumbotron jumbotron-fluid bg-white-50 text-center">
+            <div class="container">
+                <img class="img-fluid" src="./img/arena.png" alt="" class="center"/>
+                <h1 class="display-4">Academy Arena</h1>
+                <p class="lead">Come enjoy a Capitals game at our beautiful Arena!</p>
+            </div>
+        </div>
+        <!--card group for game cards-->
+        <div class="card-group">
+            <div class="card my-3">
+                <img src="./img/wolves.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Summerside Capitals @ Miramichi Timberwolves</h5>
+                    <p class="card-text">The Capitals open the season on the road in Miramichi on Sunday, September 22nd</p>
+                    <span class="badge badge-pill badge-danger">4:00pm</span>
+                </div>
+            </div>
+            <div class="card my-3">
+                <img src="./img/mariners.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Summerside Capitals vs Yarmouth Mariners</h5>
+                    <p class="card-text">Your Summerside Capitals have their home opener on Thursday, September 26th!</p>
+                    <span class="badge badge-pill badge-primary">Opening Ceremonies @ 7:00pm</span>
+                    <span class="badge badge-pill badge-danger">Puck Drop @ 7:30pm</span>
+                </div>
+            </div>
+            <div class="card my-3">
+                <img src="./img/truro.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Summerside Capitals vs Truro Bearcats</h5>
+                    <p class="card-text">Our arch rivals are coming to town on Monday, September 30th for Truth & Reconciliation night, make sure to wear your orange!</p>
+                    <span class="badge badge-pill badge-danger">7:00pm</span>
+                </div>
+            </div>
+        </div>
+        <!--container for information about the city / arena-->
+        <div class="container">
+            <div class="row">
+                <div class="col-sm">
+                    <img class="img-fluid" src="./img/city.png" alt="" />
+                </div>
+                <div class="col-sm">
+                    <h4 id="accommodations">Accommodations:</h4>
+                    <p>We're located in the beautiful city of Summerside, PEI</p>
+                    <p>Come take in a Summerside Western Capitals game, fun for the whole family!</p>
+                    <p>Travelling from out of town? No problem! We have a beautiful state-of-the-art hotel attached to our arena!</p>
+                    <img class="img-fluid" src="./img/hotel.png" alt="" />
+                </div>
+                <div class="col-sm">
+                    <img class="img-fluid" src="./img/team.png" alt="" />
+                    <h4 id="game-schedule">Game Schedule:</h4>
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <a class="nav-link" href="#">September 22nd @ Miramichi</a>
+                        </li>
+                        <li class="list-group-item">
+                            <a class="nav-link" href="#">September 26th vs Yarmouth</a>
+                        </li>
+                        <li class="list-group-item">
+                            <a class="nav-link" href="#">September 30th vs Truro</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--card for buying a ticket with a purchase button with the modal linked-->
+        <div class="card my-3">
+            <img src="./img/ticket.png" class="card-img-top img-fluid" alt="ticket">
+            <div class="card-body">
+                <h5 id="tickets">Buy a Ticket!</h5>
+                <p class="card-text">Kids: $5, Students: $8, Seniors: $10, Adults: $15</p>
+                <button type="button" data-toggle="modal" data-target="#register" class="btn btn-outline-danger">Buy your ticket</button>
+            </div>
+        </div>
+        <!--form group for submitting email for 50/50 tickets, with a popover effect-->
+        <div class="text-center">
+            <form>
+                <h1 class="text-danger my-5" id="fifty-fifty">Submit your email for 50/50!</h1>
+                <div class="form-group">
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                </div>
+                <button type="button" class="btn btn-danger btn-info popover-dismiss" data-container="body" data-toggle="popover" data-placement="top" data-content="Buy your 50/50 Ticket!">
+                    Submit Email
+                  </button>
+            </form>
+        </div>
+        <!--form modal-->
+        <div class="modal" tabindex="-1" role="dialog" id="register">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">Purchase your ticket</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                    <!--form for purchasing a ticket that will pop up when you click purchase ticket-->
+                    <form>
+                        <div class="form-row">
+                          <div class="form-group col-md-6">
+                            <label for="inputName">Name: </label>
+                            <input type="text" class="form-control" id="inputName" placeholder="Name">
+                          </div>
+                          <div class="form-group col-md-6">
+                            <label for="inputAddress">Address: </label>
+                            <input type="text" class="form-control" id="inputAddress" placeholder="Address">
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label for="inputCity">City: </label>
+                          <input type="text" class="form-control" id="inputCity" placeholder="Summerside">
+                        </div>
+                        <div class="form-group">
+                          <label for="inputProvince">Province: </label>
+                          <input type="text" class="form-control" id="inputProvince" placeholder="PEI">
+                        </div>
+                        <div class="form-row">
+                          <div class="form-group col-md-6">
+                            <label for="inputPC">Postal Code: </label>
+                            <input type="text" class="form-control" id="inputPC" placeholder="c1c1c1">
+                          </div>
+                          <div class="form-row">
+                            <div class="form-group col-md-6">
+                              <label for="inputCC">Card Number: </label>
+                              <input type="text" class="form-control" id="inputCC" placeholder="123456789">
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                  <label for="inputED">Expiry Date: </label>
+                                  <input type="text" class="form-control" id="inputED" placeholder="09/24">
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                      <label for="inputCVV">CVV: </label>
+                                      <input type="text" class="form-control" id="inputCVV" placeholder="999">
+                                    </div>
+                      </form>
+
+
+
+
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Buy now">Buy Now</button>
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Discard</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--end modal-->
+          <!--footer-->
+        <div class="container my-5">
+            <ul class="nav nav-inline">
+                <li class="nav-item">
+                    <small><a class="nav-link active" href="#game-schedule">Game Schedule</a></small>
+                </li>
+                <li class="nav-item">
+                    <small><a class="nav-link active" href="#fifty-fifty">50/50</a></small>
+                </li>
+                <li class="nav-item">
+                    <small><a class="nav-link active" href="#accommodations">Accommodations</a></small>
+                </li>
+                <li class="nav-item">
+                    <small><a class="nav-link active" href="#">info@academyarena.ca</a></small>
+                </li>
+                <li class="nav-item">
+                    <small><a class="nav-link active" href="#">&copy; Academy Arena 2024 &reg;</a></small>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!--end footer-->
+      <!-- jquery, popper, bootstrap -->
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+      <script>
+        /* jQuery so popover/tooltip works */
+        $('.popover-dismiss').popover({
+            trigger: 'focus'
+        });
+        $('#example').tooltip(options)
+      </script>
+</body>
+</html>
