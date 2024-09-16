@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+	<html lang="en">
+
+        <!-- head -->
+
+		<head>
+			<meta charset="utf-8">
+            <meta name="viewport" content="width=device-width" />
+			<title>Donavons Webcraft</title>
+            <link rel="stylesheet" type="text/css" href="./CSS/portfolio.css">
+		</head>
+
+        <!-- body -->
+
+		<body class="Background">
+            
+            <!-- navbar -->
+            <div class="Navbar">
+                <a class="active" href="#Home">Home</a>
+                <a href="#Slideshow">Slideshow</a>
+                <a href="#About">About</a>
+                <a href="#GitHub">GitHub</a>
+                <a onclick="openForm()" ondblclick="closeForm()" class="contact">Contact</a>
+            </div>
+            <!-- background video -->
+             <div id="Home">
+                <video autoplay muted loop id="Typing_Video">
+                    <source src="./IMG/video.mp4" type="video/mp4">
+                    Your browser does not support HTML5 video.
+                </video>
+             </div>
+             <!-- video text -->
+              <div class="Video_Text">
+                <h1 class="white-text">Donavon's Portfolio</h1>
+                <strong>
+                    <p class="center">
+                        <q>I have often felt that programming is an art form, <br>whose real value can only be appreciated by another
+                        <br>versed in the same arcane art
+                        </q>
+                        <br> - Ed Nather<br>
+                        <br>
+                        My name is Donavon, welcome to my portfolio website! I will show you my background & experience here!
+                        <br>Thanks for stopping by, 
+                        <br>I hope you enjoy your stay! I can be reached in the contact section of my website!
+                    </p>
+                </strong>
+              </div>
+              <!-- slideshow -->
+              <div id="Slideshow">
+                <div id="Slideshow_Background">
+                    <div id="Slideshow_Container">
+                        <!-- slide 1 / 6 -->
+                         <div class="mySlides fade">
+                            <img class="Slideshow_Images" src="./IMG/me.png" alt="picture of me">
+                            <div class="text">I'm here to make your project, come to reality!</div>
+                         </div>
+                         <!-- slide 2 / 6 -->
+                         <div class="mySlides fade">
+                            <img class="Slideshow_Images" src="./IMG/h5c3js.png" alt="HTML, CSS, JS logos">
+                            <div class="text">I am a full stack software developer,<br> trained in:<br>HTML, CSS, JavaScript,</div>
+                         </div>
+                         <!-- slide 3 / 6 -->
+                          <div class="mySlides fade">
+                            <img class="Slideshow_Images" src="./IMG/python.png" alt="python logo">
+                            <div class="text">the popular programming language Python,</div>
+                          </div>
+                          <!-- slide 4 / 6 -->
+                           <div class="mySlides fade">
+                            <img class="Slideshow_Images" src="./IMG/c#.png" alt="C# logo">
+                            <div class="text">C#, .NET Framework, ASP.NET, MVC, </div>
+                           </div>
+                           <!-- slide 5 / 6 -->
+                            <div class="mySlides fade">
+                                <img class="Slideshow_Images" src="./IMG/sql.png" alt="sql logo">
+                                <div class="text">back end development, databases & SQL.</div>
+                            </div>
+                            <!-- slide 6 / 6 -->
+                             <div class="mySlides fade">
+                                <img class="Slideshow_Images" src="./IMG/contact.png" alt="contact">
+                                <div class="text"><a class="white-text contact" onclick="openForm()">Contact me today!</a></div>
+                             </div>
+                             <!-- next / previous buttons -->
+                              <a class="Previous" onclick="plusSlides(-1)">&#10094;</a>
+                              <a class="Next" onclick="plusSlides(1)">&#10095;</a>
+                    </div>
+                    <br>
+                    <!-- slideshow dots -->
+                     <div style="text-align: center">
+                        <span class="dot" onclick="currentSlide(1)"></span>
+                        <span class="dot" onclick="currentSlide(2)"></span>
+                        <span class="dot" onclick="currentSlide(3)"></span>
+                        <span class="dot" onclick="currentSlide(4)"></span>
+                        <span class="dot" onclick="currentSlide(5)"></span>
+                        <span class="dot" onclick="currentSlide(6)"></span>
+                     </div>
+                </div>
+              </div>
+              <!-- about -->
+               <div class="Row" id="About">
+                <!-- left col -->
+                <div class="Column_2">
+                    <img src="./IMG/about.png" alt="about">
+                </div>
+                <!-- right col -->
+                 <div class="Column_1">
+                    <h1>About</h1>
+                    <p>My names Donavon, I'm a full stack software developer who loves to code! My other passions are my family & hockey!I am a graduate of <a href="https://www.learncodinganywhere.com" target="_blank">The Tech Academy</a>'s Software Developer Boot Camp, and trained and experienced in HTML, CSS, JavaScript, SQL, Python, C# and more!
+                    <br> 
+                    <br>I would love to make your project come alive! <a onclick="openForm()" class="contact">Contact</a> me today!
+                </p>
+                 </div>
+               </div>
+               <!-- github section -->
+                <div class="Row" id="GitHub">
+                    <!-- left col -->
+                     <div class="Column_1">
+                        <h1>GitHub</h1>
+                        <p>You can view my coding projects on my GitHub here:
+                            <br>
+                            <p class="center"><a href="https://github.com/dwcml1995" target="_blank">My GitHub</a></p>
+                        </p>
+                     </div>
+                     <!-- right col -->
+                      <div class="Column_2">
+                        <a href="https://github.com/dwcml1995" target="_blank"><img src="./IMG/github.png"></a>
+                      </div>
+                </div>
+                <!-- contact form -->
+                 <div id="Contact">
+                    <button onclick="openForm()" class="Pop_Up_Button">CONTACT</button>
+                    <div class="form-popup" id="myForm">
+                        <form action="https://formspree.io/f/manwzkpy" method="POST" class="form-container">
+                            <h1>Contact</h1>
+                            <label for="name"><strong>Name</strong></label>
+                                <input type="text" placeholder="Please enter your name here" name="name" required>
+                            <label for="phone"><strong>Phone Number</strong></label>
+                                <input type="text" placeholder="Please enter your phone number here" name="phone">
+                            <label for="email"><strong>Email</strong></label>
+                                <input type="text" placeholder="Please enter your email here" name="email" required>
+                            <label for="message"><strong>Message</strong></label>
+                                <input type="text" placeholder="Please type your message here" name="message">
+                            <button type="submit" class="btn">SUBMIT</button>
+                            <button type="button" class="btn cancel" onclick="closeForm()">CLOSE</button>
+                        </form>
+                    </div>
+                 </div>
+                 <!-- footer -->
+                  <footer>
+                    <p class="center">&copy Donavons Webcraft <a href="https://dwcml1995.github.io/HTML-and-CSS-Projects/" target="_blank">Donavons Webcraft</a></p><br>
+                  </footer>
+                  <script src="./JS/main.js"></script>
+		</body>
+</html>
